@@ -38,10 +38,13 @@ function Home() {
               amount: Yup.number().required("Amount is required"),
             })}
             onSubmit={(values) => {
-              alert(JSON.stringify(values, null, 2));
-              write({
-                args: [userAddress, account, balance],
-              });
+              if (account) {
+                write({
+                  args: [userAddress, account, balance],
+                });
+              } else {
+                alert("Connect to your account");
+              }
             }}
           >
             {({ handleSubmit, setFieldValue }) => (
