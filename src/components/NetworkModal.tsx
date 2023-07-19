@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Card, Modal, Spin, Typography, message, theme } from "antd";
+import { Button, Card, Modal, Spin, Typography, message } from "antd";
 
 import { useConnect, useDisconnect } from "wagmi";
 import { LoadingOutlined } from "@ant-design/icons";
