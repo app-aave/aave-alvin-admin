@@ -37,7 +37,7 @@ function Home() {
             validationSchema={Yup.object().shape({
               amount: Yup.number().required("Amount is required"),
             })}
-            onSubmit={(values) => {
+            onSubmit={() => {
               if (account) {
                 write({
                   args: [userAddress, account, balance],
